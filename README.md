@@ -1,19 +1,24 @@
-The function conditionaldepth returns the conditional depth of a number of response value given a
+The function **conditionaldepth** returns the conditional depth of a number of response value given a
 fixed covariate value based on one of the halfspace depth, the spatial depth and the projection depth.
 Its arguments are the following:
-  (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+
+  (1) `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
-  (2) Covariate: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+                
+  (2) `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
-  (3) fixed.covariate: A vector whose length is equal to q, the number of columns of Covariate.
-  (4) response.value: A m-by-p matrix, whose each row is a response value. If it a vector of length p,
+                
+  (3) `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+  
+  (4) `response.value`: A m-by-p matrix, whose each row is a response value. If it a vector of length p,
                 m is taken to be 1.
-  (5) depth.type: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+                
+  (5) `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
-The function conditionaltrimmedmean returns the conditional 100r% trimmed mean given a fixed covariate
+The function **conditionaltrimmedmean** returns the conditional 100r% trimmed mean given a fixed covariate
 value based on one of the halfspace depth, the spatial depth and the projection depth. Its arguments are
 the following:
   (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
