@@ -1,4 +1,4 @@
-The function **conditionaldepth** returns the conditional depth of a number of response value given a
+The function **conditionaldepth** returns the conditional depth of a number of response values given a
 fixed covariate value based on one of the halfspace depth, the spatial depth and the projection depth.
 Its arguments are the following:
 
