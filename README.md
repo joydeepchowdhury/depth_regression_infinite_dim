@@ -2,79 +2,93 @@ The function **conditionaldepth** returns the conditional depth of a number of r
 fixed covariate value based on one of the halfspace depth, the spatial depth and the projection depth.
 Its arguments are the following:
 
-  (1) `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+  1. `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
                 
-  (2) `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+  2. `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
                 
-  (3) `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+  3. `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
   
-  (4) `response.value`: A m-by-p matrix, whose each row is a response value. If it a vector of length p,
+  4. `response.value`: A m-by-p matrix, whose each row is a response value. If it a vector of length p,
                 m is taken to be 1.
                 
-  (5) `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+  5. `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
 The function **conditionaltrimmedmean** returns the conditional 100r% trimmed mean given a fixed covariate
 value based on one of the halfspace depth, the spatial depth and the projection depth. Its arguments are
 the following:
-  (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+
+  1. `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
-  (2) Covariate: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+                
+  2. `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
-  (3) fixed.covariate: A vector whose length is equal to q, the number of columns of Covariate.
-  (4) trimming.proportion: A number between 0 and 1, equal to r in the definition of conditional 100r%
+                
+  3. `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+  4. 
+  5. `trimming.proportion`: A number between 0 and 1, equal to r in the definition of conditional 100r%
                 trimmed mean. Default value is 0.5.
-  (5) depth.type: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+                
+  5. `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
-The function conditionalmedian returns the conditional median given a fixed covariate value based on
+The function **conditionalmedian** returns the conditional median given a fixed covariate value based on
 one of the halfspace depth, the spatial depth and the projection depth. Its arguments are the following:
-  (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+
+  1. `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
-  (2) Covariate: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+                
+  2. `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
-  (3) fixed.covariate: A vector whose length is equal to q, the number of columns of Covariate.
-  (4) depth.type: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+                
+  3. `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+  
+  4. `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
-The function conditionalspread returns the value of the conditional spread measure Delta( r | x ) given
+The function **conditionalspread** returns the value of the conditional spread measure Delta( r | x ) given
 a fixed covariate value 'x' and a number 'r' with 0 < r < 1, based on one of the halfspace depth, the
 spatial depth and the projection depth. Its arguments are the following:
-  (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+
+  1. `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
-  (2) Covariate: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+                
+  2. `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
-  (3) fixed.covariate: A vector whose length is equal to q, the number of columns of Covariate.
-  (4) r: A number between 0 and 1, equal to r in the definition of Delta( r | x ). Default value is 0.5.
-  (5) depth.type: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+                
+  3. `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+ 
+  4. `r`: A number between 0 and 1, equal to r in the definition of Delta( r | x ). Default value is 0.5.
+  
+  5. `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
-The function conditionalskewness returns the value of one of the conditional skewness measures
+The function **conditionalskewness** returns the value of one of the conditional skewness measures
 Psi_1( r_1, r_2 | x ) and Psi_2( r_2 | x ) given a fixed covariate value 'x' and numbers 'r_1' and 'r_2'
 with 0 < r_1, r_2 < 1, based on one of the halfspace depth, the spatial depth and the projection depth.
 Its arguments are the following:
-  (1) Response: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
+  1. `Response`: A n-by-p matrix, where n is the sample size and p (> 1) is the dimension of the response.
                 For projection depth, dimnesion of the response must be either 2 or 3.
-  (2) Covariate: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
+  2. `Covariate`: A n-by-q matrix, where n is the sample size and q is either the length of the equispaced
                 grid where the functional covariate is recorded, or the dimension of the finite dimensional
                 covariate. If it is a vector, it is treated as a n-by-1 matrix.
-  (3) fixed.covariate: A vector whose length is equal to q, the number of columns of Covariate.
-  (4) measure.type: 1 for Psi_1( r_1, r_2 | x ) and 2 for Psi_2( r_1 | x ). Default is 1.
-  (5) r_1: A number between 0 and 1, equal to r_1 in the definition of Psi_1( r_1, r_2 | x ).
+  3. `fixed.covariate`: A vector whose length is equal to q, the number of columns of Covariate.
+  4. `measure.type`: 1 for Psi_1( r_1, r_2 | x ) and 2 for Psi_2( r_1 | x ). Default is 1.
+  5. `r_1`: A number between 0 and 1, equal to r_1 in the definition of Psi_1( r_1, r_2 | x ).
                 Default value is 0.1.
-  (6) r_2: A number between 0 and 1, equal to r_2 in the definitions of Psi_1( r_1, r_2 | x ) and
+  6. `r_2`: A number between 0 and 1, equal to r_2 in the definitions of Psi_1( r_1, r_2 | x ) and
                 Psi_2( r_2 | x ). Default value is 0.5.
-  (7) depth.type: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
+  7. `depth.type`: 1 for halfspace depth, 2 for spatial depth and 3 for projection depth. Default value
                 is 1.
 
 
